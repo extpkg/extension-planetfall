@@ -8,6 +8,18 @@
     />
     <title>Planetfall</title>
     <style>
+      * {
+        padding: 0;
+        margin: 0;
+      }
+      html,
+      body {
+        height: 100%;
+      }
+      body {
+        background: #000;
+        overflow: hidden;
+      }
       #frame {
         position: fixed;
         top: 0;
@@ -22,5 +34,7 @@
   </head>
   <body>
     <div id="frame"></div>
+    <canvas></canvas>
+    <script src="./app/index.js"></script>
   </body>
 </html>

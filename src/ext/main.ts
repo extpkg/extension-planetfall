@@ -52,6 +52,10 @@ ext.runtime.onExtensionClick.addListener(async () => {
       vibrancy: false,
       frame: false,
       titleBarStyle: "inset",
+      width: 860,
+      height: 600,
+      minWidth: 860,
+      minHeight: 600,
     });
 
     websession = await ext.websessions.create({
@@ -68,10 +72,10 @@ ext.runtime.onExtensionClick.addListener(async () => {
     });
 
     await ext.webviews.loadFile(webview.id, "index.html");
-    // await ext.webviews.openDevTools(webview.id, {
-    //   mode: "detach",
-    //   activate: true,
-    // });
+    await ext.webviews.openDevTools(webview.id, {
+      mode: "detach",
+      activate: true,
+    });
 
     await ext.windows.focus(window.id);
 
