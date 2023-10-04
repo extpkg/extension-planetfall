@@ -72,10 +72,10 @@ ext.runtime.onExtensionClick.addListener(async () => {
     });
 
     await ext.webviews.loadFile(webview.id, "index.html");
-    await ext.webviews.openDevTools(webview.id, {
-      mode: "detach",
-      activate: true,
-    });
+    // await ext.webviews.openDevTools(webview.id, {
+    //   mode: "detach",
+    //   activate: true,
+    // });
 
     await ext.windows.focus(window.id);
     await ext.webviews.focus(webview.id);
