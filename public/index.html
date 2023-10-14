@@ -36,5 +36,12 @@
     <div id="frame"></div>
     <canvas></canvas>
     <script src="./app/index.js"></script>
+    <script type="module">
+      const platformInfo = await ext.runtime.getPlatformInfo();
+
+      if (platformInfo.os !== "mac") {
+        document.getElementById("frame").style.right = "105px";
+      }
+    </script>
   </body>
 </html>
