@@ -1,6 +1,6 @@
 {
   "name": "extension-planetfall",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Uncover cosmic secrets as you navigate planets and deactivate satellites.",
   "type": "module",
   "scripts": {

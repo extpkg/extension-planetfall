@@ -21,6 +21,12 @@ const KAPBULA_DUNE_COLOR = ["#4F4874", "#FE8265", "#AE5B72", "#905778"];
 const ESKIRI_DUNE_COLOR = ["#fff", "#fff", "#D3DEE6", "#B7C9D5"];
 const ESKIRI_CANYON_COLOR = ["#F9FBFB", "#B7C9D5", "#D3DEE6"];
 
+let OS = "";
+
+ext.runtime.getPlatformInfo().then(({ os }) => {
+  OS = os;
+});
+
 const camera = {
   x: 0,
   y: 0,
@@ -1556,7 +1562,7 @@ var drawDashboard = (context) => {
   context.fillStyle = white(0.3);
   context.fillText(
     `/${planets.length}`,
-    shake[0] + window.innerWidth - 24,
+    shake[0] + (OS === "mac" ? window.innerWidth - 24 : 72),
     shake[1] + 50,
   );
   context.font = `48px ${FONT}`;
@@ -1565,7 +1571,7 @@ var drawDashboard = (context) => {
     Object.keys(objectives.savedPlanets).filter(
       (planet) => objectives.savedPlanets[planet],
     ).length,
-    shake[0] + window.innerWidth - 52,
+    shake[0] + (OS === "mac" ? window.innerWidth - 52 : 44),
     shake[1] + 50,
   );
 
