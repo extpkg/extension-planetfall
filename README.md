@@ -13,3 +13,6 @@ Uncover cosmic secrets as you navigate planets and deactivate satellites.
 
 Run `npm run dev` to watch `src` and `public` directories and rebuild the
 project on changes
+
+## Source
+https://github.com/chiaogu/planetfall
